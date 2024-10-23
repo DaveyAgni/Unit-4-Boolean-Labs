@@ -3,18 +3,30 @@
 
 public class AngryBear 
 {
-    //add instance variables
-    //one for number of teeth
-    //one for number of days awake
+    private int awakeDays;
+    private int numTeeth;
     
     public AngryBear( int one, int two )
     {
-    	//add code here
+    	awakeDays = one;
+        numTeeth = two;
     }
     
     public boolean isAngry()
     {
-    	//add code here
-    	return false;
+    	if(one > 3 && two =< 10 )
+        {
+            return true;
+        }
+        else if(two =< 0)
+        {
+            return true;
+        }
+        else if(one > 5)
+        {
+            return true;
+        }
+    return false;
+        
     }
 }
