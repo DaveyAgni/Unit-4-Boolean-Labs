@@ -12,17 +12,22 @@ public class RPSRunner
 		Scanner keyboard = new Scanner(System.in);
 		char response;
 		
-		//add in a do while loop after you get the basics up and running
-		
-			String player = "";
+		do{
 		
 			out.print("type in your prompt [R,P,S] :: ");
-			
-			//read in the player value
+			String player = keyboard.nextLine().toUpperCase();
 		
-			RockPaperScissors game = new RockPaperScissors();		
+			RockPaperScissors game = new RockPaperScissors(player);
+			System.out.println(game.toString);		
+
+			out.print("Play again? : Y/N");
+			response = keyboard.nextLine().toLowerCase().charAt(0);
+		
+		} while (response == 'Y');
+
+		keyboard.close();
+		
+
 	}
 }
-
-
 
